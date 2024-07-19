@@ -158,7 +158,7 @@ import { Icon as IconT } from '@components/Icon/Icon';
 ### Component params
 
 ```ts
-interface Props {
+interface ComponentProps {
   icon: Icons;
   color?: string;
   size?: number;

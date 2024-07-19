@@ -15,7 +15,7 @@ A Vite plugin which generates `.tsx` and `.astro` components from `.svg` files a
 - [Usage](#usage)
   - [Generate components](#generate-components)
   - [Use component(s) in templates](#use-components-in-templates)
-  - [Component Params](#component-params)
+  - [Component params](#component-params)
   - [Type safety](#type-safety)
 
 
@@ -136,7 +136,7 @@ import { Icon as IconT } from '@components/Icon/Icon';
 <IconT icon="react" />
 ```
 
-### Component Params
+### Component params
 
 
 

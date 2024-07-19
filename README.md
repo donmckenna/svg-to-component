@@ -1,8 +1,10 @@
-# `svg-to-component`
+# svg-to-component
 
 A Vite plugin which generates `.tsx` and `.astro` components from `.svg` files and directories.
 
 ![svg-to-component plugin diagram](/public/docs/svg-to-component-01.jpg)
+
+
 
 ## Config setup
 
@@ -43,6 +45,11 @@ In the future this assumption could be improved to be more versatile, but for no
 ```
 
 ### Config params
+
+|.|.|
+|-|-|
+|input|shiss patther ton sfi|
+
 
 #### `inputPaths: string[]`
 - Path(s) which plugin uses to find `.svgs` to convert. 

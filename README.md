@@ -199,7 +199,7 @@ An `Icons` model is generated:
 
 ![svg-to-component plugin diagram](/public/docs/svg2c-eg-03.jpg)
 
-And we can choose our component `icon` types:
+And we can expect our component `icon` types to look like this:
 
 ![svg-to-component plugin diagram](/public/docs/svg2c-eg-01.jpg)
 

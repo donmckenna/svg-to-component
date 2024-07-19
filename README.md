@@ -6,7 +6,7 @@ A Vite plugin which generates `.tsx` and `.astro` components from `.svg` files a
 
 
 - [Example](#example)
-  - [Example file references](#example-file-references)
+  - [File references](#file-references)
 - [Setup](#setup)
   - [Config](#config)
   - [Config params](#config-params)
@@ -32,7 +32,7 @@ Running the Astro project in this repo offers a minimal setup of the working plu
 
 ![svg-to-component plugin diagram](/public/docs/svg2c-eg-04.jpg)
 
-### Example file references
+### File references
 - [Config](https://github.com/donmckenna/svg-to-component/blob/main/astro.config.mjs#L10-L17)
 - [Plugin](https://github.com/donmckenna/svg-to-component/blob/main/plugins/svgToComponent.ts)
 - [Generated Icon Directory](https://github.com/donmckenna/svg-to-component/tree/main/src/components/Icon)

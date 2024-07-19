@@ -5,6 +5,7 @@ A Vite plugin which generates `.tsx` and `.astro` components from `.svg` files a
 ![svg-to-component plugin diagram](/public/docs/svg-to-component-01.jpg)
 
 
+- [Example](#example)
 - [Setup](#setup)
   - [Config](#config)
   - [Config params](#config-params)
@@ -18,6 +19,12 @@ A Vite plugin which generates `.tsx` and `.astro` components from `.svg` files a
   - [Component params](#component-params)
   - [Type safety](#type-safety)
 
+
+## Example
+
+Running the Astro project in this repo will give you a minimal setup of the working plugin with both light and dark themes.
+
+![svg-to-component plugin diagram](/public/docs/svg2c-eg-04.jpg)
 
 
 ## Setup

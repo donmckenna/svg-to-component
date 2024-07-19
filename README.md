@@ -29,7 +29,7 @@ export default defineConfig({
 This plugin assumes the existence of a `/src/components/` directory and uses a custom path in `tsconfig.json`.  
 In the future this assumption could be improved to be more versatile, but for now we just need to add `@components` to our `paths`.
 
-```json
+```ts
 // tsconfig.json
 {
   "compilerOptions": {

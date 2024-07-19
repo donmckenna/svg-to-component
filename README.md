@@ -36,7 +36,7 @@ Running the Astro project in this repo offers a minimal setup of the working plu
 
 ### Config
 
-At a minimum we need an `outputPath` and at least one `inputPath`.  
+At a minimum we need an `outputPath` to render our components and types to, and at least one `inputPath` to grab `.svgs` from.  
 A basic Astro example may look like this:
 
 ```ts

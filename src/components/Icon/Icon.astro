@@ -1,0 +1,58 @@
+---
+import type { Icons } from './Icons';
+
+// icons
+import MoonIcon from '@components/Icon/icons/astro/moon.astro';
+import SunIcon from '@components/Icon/icons/astro/sun.astro';
+// logos
+import AstroIcon from '@components/Icon/logos/astro/astro.astro';
+import ReactIcon from '@components/Icon/logos/astro/react.astro';
+import TypescriptIcon from '@components/Icon/logos/astro/typescript.astro';
+import ViteIcon from '@components/Icon/logos/astro/vite.astro';
+
+interface Props {
+  icon: Icons;
+  color?: string;
+  size?: number;
+  id?: string;
+  class?: string;
+}
+
+const { icon, color, size, id, class: className, ...rest } = Astro.props;
+
+const icons: {[key in Icons]: any} = {
+  // icons
+  moon: MoonIcon,
+  sun: SunIcon,
+  // logos
+  astro: AstroIcon,
+  react: ReactIcon,
+  typescript: TypescriptIcon,
+  vite: ViteIcon,
+};
+
+const Component = icons[icon];
+---
+  
+<div
+  class:list={[
+    'icon',
+    {
+      isFlat: color,
+      [icon]: color,
+    },
+    className
+  ]}
+  {...rest}
+  style={{
+    ['--icon-size' as string]: size,
+    backgroundColor: color ? color : 'transparent'
+  }}
+  id={id}
+>
+  {!color && <Component />}
+</div>
+
+<style lang="scss">
+@import './Icon.module.scss';
+</style>

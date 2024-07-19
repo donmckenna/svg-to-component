@@ -1,0 +1,119 @@
+---
+import Icon from '@components/Icon/Icon.astro';
+
+const i = {
+  size: 24,
+  color: `var(--text-color)`,
+};
+---
+
+<label class="theme-switcher">
+  <input type="checkbox" onclick="toggleTheme()" />
+  <div class="icons">
+    <Icon id="theme-indicator-light" class="icon" icon="sun" size={i.size} color={i.color} />
+    <Icon id="theme-indicator-dark" class="icon" icon="moon" size={i.size} color={i.color} />
+  </div>
+</label>
+
+<script is:inline>
+const themeId = 'site-theme';
+const theme = document.body.attributes['data-theme'];
+const themeIndicatorDark =  document.getElementById('theme-indicator-dark');
+const themeIndicatorLight = document.getElementById('theme-indicator-light');
+
+const getPreferredScheme = () => (
+  window.matchMedia?.('(prefers-color-scheme:dark)')?.matches
+    ? 'dark'
+    : window.matchMedia?.('(prefers-color-scheme:light)')?.matches
+      ? 'light'
+      : 'dark' // default to dark theme ¯\_(ツ)_/¯
+);
+
+const hideAll = () => {
+  themeIndicatorDark.classList.remove('visible');
+  themeIndicatorLight.classList.remove('visible');
+};
+
+const showCurrentTheme = () => {
+  const indicator = theme.value === 'light' ? themeIndicatorDark : themeIndicatorLight;
+  indicator.classList.add('visible');
+};
+
+const updateTheme = () => {
+  hideAll();
+  showCurrentTheme();
+};
+
+const toggleTheme = () => {
+  theme.value = theme.value === 'light' ? 'dark' : 'light';
+  updateTheme();
+  localStorage.setItem(themeId, theme.value);
+};
+
+const localStorageItem = localStorage.getItem(themeId);
+
+if (localStorageItem) {
+  theme.value = localStorage.getItem(themeId);
+  updateTheme();
+} else {
+  theme.value = getPreferredScheme();
+  updateTheme();
+  localStorage.setItem(themeId, theme.value);
+}
+</script>
+
+<style lang="scss">
+.theme-switcher {
+  position: fixed;
+  top: 61%;
+  right: 50%;
+  transform: translateX(50%);
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.theme-switcher input[type="checkbox"] {
+  display: none;
+}
+
+.theme-switcher p {
+  transition: var(--transition-fast);
+  transition-property: color;
+}
+
+.icons {
+  opacity: 0.5;
+  transition: var(--transition-med);
+  transition-property: opacity;
+  .theme-switcher:hover & {
+    opacity: 1;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  opacity: 0.4;
+  transition: ease 0.24s;
+  transition-property: opacity, transform;
+  &#theme-indicator-light {
+    transform: rotate(90deg) scale(0.9);
+    opacity: 0;
+    &.visible {
+      transform: translateX(1px) translateY(-1px);
+      opacity: 1;
+    }
+  }
+  &#theme-indicator-dark {
+    transform: translateX(1px) translateY(-1px) rotate(-90deg) scale(0.9);
+    opacity: 0;
+    &.visible {
+      transform: translateX(1px) translateY(-1px);
+      opacity: 1;
+    }
+  }
+}
+</style>

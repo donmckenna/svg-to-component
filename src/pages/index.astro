@@ -1,0 +1,102 @@
+---
+import Layout from '@layouts/Layout.astro';
+import ThemeSwitcher from '@components/Theme/ThemeSwitcher.astro';
+
+import IconAstro from '@components/Icon/Icon.astro';
+import { Icon as IconTsx } from '@components/Icon/Icon';
+
+const i = {
+	size: 32,
+	color: 'var(--text-color)',
+};
+---
+
+<Layout title="svg-to-component example">
+	<div class="svg-to-component-example">
+
+		<table>
+			<thead>
+				<tr>
+					<th />
+					<th><code>.astro</code></th>
+					<th><code>.tsx</code></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>.svg</code> using <code>currentColor</code></td>
+					<td>
+						<div class="icon-container">
+
+							<IconAstro icon="astro" size={i.size} />
+
+						</div>
+					</td>
+					<td>
+						<div class="icon-container">
+
+							<IconTsx icon="astro" size={i.size} />
+
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Custom color</td>
+					<td>
+						<div class="icon-container">
+
+							<IconAstro icon="astro" size={i.size} color={i.color} />
+
+						</div>
+					</td>
+					<td>
+						<div class="icon-container">
+
+							<IconTsx icon="astro" size={i.size} color={i.color} />
+							
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<ThemeSwitcher />
+
+	</div>
+</Layout>
+
+<style lang="scss" is:global>
+.svg-to-component-example {
+	display: flex;
+	gap: 16px;
+	color: var(--text-color);
+	[data-theme="dark"] & {
+		--background-color-secondary: #050505;
+		--border-color: #1a1a1a;
+		--text-color: #fff;
+	}
+	[data-theme="light"] & {
+		--background-color-secondary: #fff;
+		--border-color: #eaeaea;
+		--text-color: #000;
+	}
+}
+
+.svg-to-component-example table {
+	background-color: var(--background-color-secondary);
+	border-collapse: collapse;
+	td,
+	th {
+		padding: 16px 24px;
+		font-size: 13px;
+		border: solid 1px var(--border-color);
+	}
+}
+
+.icon-container {
+	min-width: 52px;
+	padding: 10px 0;
+	display: flex;
+	justify-content: center;
+}
+</style>

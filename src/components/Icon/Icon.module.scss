@@ -1,0 +1,36 @@
+.icon {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  transition: ease 0.1s;
+  transition-property: background-color, color;
+  &.isFlat {
+    width: calc(var(--icon-size)  * 1px);
+    height: calc(var(--icon-size)  * 1px);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    // ----------------------------------------
+    // icons
+    &.moon {
+      mask-image: url('/icons/moon.svg');
+    }
+    &.sun {
+      mask-image: url('/icons/sun.svg');
+    }
+    // ----------------------------------------
+    // logos
+    &.astro {
+      mask-image: url('/logos/astro.svg');
+    }
+    &.react {
+      mask-image: url('/logos/react.svg');
+    }
+    &.typescript {
+      mask-image: url('/logos/typescript.svg');
+    }
+    &.vite {
+      mask-image: url('/logos/vite.svg');
+    }
+  }
+}

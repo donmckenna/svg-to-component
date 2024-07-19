@@ -16,7 +16,6 @@ A basic Astro example may look like this:
 export default defineConfig({
   vite: {
     plugins: [
-
       svgToComponent({
         inputPaths: [
           '/public/icons',
@@ -24,7 +23,6 @@ export default defineConfig({
         ],
         outputPath: '/src/components/Icon',
       })
-      
     ]
   },
 });

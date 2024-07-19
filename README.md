@@ -149,7 +149,7 @@ import { Icon as IconT } from '@components/Icon/Icon';
 
 ### Type safety
 
-Types for `<Icon icon={} />` are automatically generated from `.svg` file names included in `inputPaths`.
+Types for `<Icon />'s` `icon` param are automatically generated from `.svg` file names included in `inputPaths`.
 
 Given an asset directory structure which looks like this:
 

@@ -17,6 +17,11 @@ A Vite plugin which generates `.tsx` and `.astro` components from `.svg` files a
   - [Generate components](#generate-components)
   - [Use component(s) in templates](#use-components-in-templates)
   - [Component params](#component-params)
+    - [`icon`: `Icons`](#icon-icons)
+    - [`color?`: `string`](#color-string)
+    - [`size?`: `number`](#size-number)
+    - [`id`: `string`](#id-string)
+    - [`class`: `string`](#class-string)
   - [Type safety](#type-safety)
 
 
@@ -145,6 +150,34 @@ import { Icon as IconT } from '@components/Icon/Icon';
 
 ### Component params
 
+```ts
+interface Props {
+  icon: Icons;
+  color?: string;
+  size?: number;
+  id?: string;
+  class?: string;
+}
+```
+
+#### `icon`: `Icons`
+- An icon name from the `Icons` model generated from `.svg` file names found in `inputPaths` 
+
+#### `color?`: `string`
+- A valid color such as hex, rgb, hsla or css variable.
+  - When _not_ defined, component will use `svg's` default colors, including `currentColor`.
+  - When defined, component will use `svg` as a css `mask-image` and apply the `color` to its `background-color`
+
+#### `size?`: `number`
+- The icon width and height in pixels.
+- Defaults to `16`
+
+#### `id`: `string`
+- Add a referenceable `id` to `<Icon />` component.
+
+#### `class`: `string`
+- Add a referenceable css `class` to `<Icon />` component.
+  - If using `.tsx` component, this param will instead be called `className`
 
 
 ### Type safety

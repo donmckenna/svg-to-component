@@ -46,7 +46,6 @@ In the future this assumption could be improved to be more versatile, but for no
 
 ### Config params
 
-|.|.|
 |-|-|
 |input|shiss patther ton sfi|
 

@@ -45,16 +45,16 @@ In the future this assumption could be improved to be more versatile, but for no
 ### Config params
 
 #### `inputPaths: string[]`
-Path(s) which plugin uses to find `.svgs` to convert. 
+- Path(s) which plugin uses to find `.svgs` to convert. 
 
 #### `outputPath: string`
-Path where output `<Icon />` component(s) will be created
+- Path where output `<Icon />` component(s) will be created
 
 #### `exclude?: ('astro'|'tsx')[]`
-`<Icon />` component file formats to not generate.
+- `<Icon />` component file formats to not generate.
 
 #### `include?: ('astro'|'tsx')[]`
-`<Icon />` component file formats to definitely generate.
+- `<Icon />` component file formats to definitely generate.
 
 
 ## Usage

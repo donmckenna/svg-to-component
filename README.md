@@ -46,24 +46,27 @@ In the future this assumption could be improved to be more versatile, but for no
 
 ### Config params
 
-|Param|Description|
-|-|-|
-|`inputPaths: string[]`|Path(s) which plugin uses to find `.svgs` to convert.|
-|`outputPath: string`|Path where output `<Icon />` component(s) will be created|
-|`exclude?: ('astro'|'tsx')[]`|`<Icon />` component file formats to not generate.|
-|`include?: ('astro'|'tsx')[]`|`<Icon />` component file formats to definitely generate.|
+```ts
+type ComponentType = 'astro'|'tsx';
 
+interface PluginConfig {
+  inputPaths: string[];
+  outputPath: string;
+  include?: ComponentType[];
+  exclude?: ComponentType[];
+}
+```
 
-#### `inputPaths: string[]`
+#### `inputPaths`: `string[]`
 - Path(s) which plugin uses to find `.svgs` to convert. 
 
-#### `outputPath: string`
+#### `outputPath`: `string`
 - Path where output `<Icon />` component(s) will be created
 
-#### `exclude?: ('astro'|'tsx')[]`
+#### `exclude`: `ComponentType[]`
 - `<Icon />` component file formats to not generate.
 
-#### `include?: ('astro'|'tsx')[]`
+#### `include`: `ComponentType[]`
 - `<Icon />` component file formats to definitely generate.
 
 
@@ -137,22 +140,3 @@ And we can expect our component `icon` types to look like this:
 
 ![svg-to-component plugin diagram](/public/docs/svg2c-eg-01.jpg)
 
-
-
-
-
-
-
-## Parameters
-
-### `inputPaths: string[]`
-Path(s) which plugin uses to find `.svgs` to convert. 
-
-### `outputPath: string`
-Path where output `<Icon />` component(s) will be created
-
-### `exclude?: ('astro'|'tsx')[]`
-`<Icon />` component file formats to not generate.
-
-### `include?: ('astro'|'tsx')[]`
-`<Icon />` component file formats to definitely generate.

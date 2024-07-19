@@ -5,19 +5,18 @@ A Vite plugin which generates `.tsx` and `.astro` components from `.svg` files a
 ![svg-to-component plugin diagram](/public/docs/svg-to-component-01.jpg)
 
 
-- [svg-to-component](#svg-to-component)
-  - [Setup](#setup)
-    - [Config](#config)
-    - [Config params](#config-params)
-      - [`inputPaths`: `string[]`](#inputpaths-string)
-      - [`outputPath`: `string`](#outputpath-string)
-      - [`exclude`: `ComponentType[]`](#exclude-componenttype)
-      - [`include`: `ComponentType[]`](#include-componenttype)
-  - [Usage](#usage)
-    - [Generate components](#generate-components)
-    - [Use component(s) in templates](#use-components-in-templates)
-    - [Component Params](#component-params)
-    - [Type safety](#type-safety)
+- [Setup](#setup)
+  - [Config](#config)
+  - [Config params](#config-params)
+    - [`inputPaths`: `string[]`](#inputpaths-string)
+    - [`outputPath`: `string`](#outputpath-string)
+    - [`exclude`: `ComponentType[]`](#exclude-componenttype)
+    - [`include`: `ComponentType[]`](#include-componenttype)
+- [Usage](#usage)
+  - [Generate components](#generate-components)
+  - [Use component(s) in templates](#use-components-in-templates)
+  - [Component Params](#component-params)
+  - [Type safety](#type-safety)
 
 
 

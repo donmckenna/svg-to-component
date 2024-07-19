@@ -27,9 +27,15 @@ A Vite plugin which generates `.tsx` and `.astro` components from `.svg` files a
 
 ## Example
 
-Running the Astro project in this repo offers a minimal setup of the working plugin showing `currentColor` working with dynamic color scheme css variables.
+Running the Astro project in this repo offers a minimal setup of the working plugin.
 
 ![svg-to-component plugin diagram](/public/docs/svg2c-eg-04.jpg)
+
+File references:
+- [Config](https://github.com/donmckenna/svg-to-component/blob/main/astro.config.mjs#L10-L17)
+- [Plugin](https://github.com/donmckenna/svg-to-component/blob/main/plugins/svgToComponent.ts)
+- [Generated Icon Directory](https://github.com/donmckenna/svg-to-component/tree/main/src/components/Icon)
+- [Generated Icon Model](https://github.com/donmckenna/svg-to-component/blob/main/src/components/Icon/Icons.ts)
 
 
 ## Setup

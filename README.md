@@ -9,7 +9,7 @@ A Vite plugin which generates `.tsx` and `.astro` components from `.svg` files a
   - [File references](#file-references)
 - [Setup](#setup)
   - [Config](#config)
-  - [Config params](#config-params)
+  - [Config props](#config-props)
     - [`inputPaths`: `string[]`](#inputpaths-string)
     - [`outputPath`: `string`](#outputpath-string)
     - [`exclude`: `ComponentType[]`](#exclude-componenttype)
@@ -17,7 +17,7 @@ A Vite plugin which generates `.tsx` and `.astro` components from `.svg` files a
 - [Usage](#usage)
   - [Generate components](#generate-components)
   - [Use component(s) in templates](#use-components-in-templates)
-  - [Component params](#component-params)
+  - [Component props](#component-props)
     - [`icon`: `Icons`](#icon-icons)
     - [`color?`: `string`](#color-string)
     - [`size?`: `number`](#size-number)
@@ -79,7 +79,7 @@ In the future this assumption could be improved to be more versatile, but for no
 }
 ```
 
-### Config params
+### Config props
 
 ```ts
 type ComponentType = 'astro'|'tsx';
@@ -155,7 +155,7 @@ import { Icon as IconT } from '@components/Icon/Icon';
 <IconT icon="react" />
 ```
 
-### Component params
+### Component props
 
 ```ts
 interface ComponentProps {

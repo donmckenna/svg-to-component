@@ -6,7 +6,7 @@ A Vite plugin which generates `.tsx` and `.astro` components from `.svg` files a
 
 ## Config setup
 
-At a minimum we need an `outputPath` and at least one `inputPath` array value.
+At a minimum we need an `outputPath` and at least one `inputPath`.  
 A basic Astro example may look like this:
 
 ```ts

@@ -24,7 +24,11 @@ const i = {
 			</thead>
 			<tbody>
 				<tr>
-					<td><code>.svg</code> using <code>currentColor</code></td>
+					<td>
+						<code>.svg</code> using <code>currentColor</code>:
+						<br/>
+						<code>{`<Icon icon="astro" />`}</code>
+					</td>
 					<td>
 						<div class="icon-container">
 
@@ -41,7 +45,11 @@ const i = {
 					</td>
 				</tr>
 				<tr>
-					<td>Custom color</td>
+					<td>
+						Custom color:
+						<br/>
+						<code>{`<Icon icon="astro" color="var(--text-color)" />`}</code>
+					</td>
 					<td>
 						<div class="icon-container">
 
@@ -89,6 +97,7 @@ const i = {
 	th {
 		padding: 16px 24px;
 		font-size: 13px;
+		line-height: 1.6;
 		border: solid 1px var(--border-color);
 	}
 }

@@ -153,6 +153,7 @@ interface Props {
   color?: string;
   size?: number;
   id?: string;
+  className?: string;
 }
 
 export const Icon: FC<Props> = ({
@@ -160,6 +161,7 @@ export const Icon: FC<Props> = ({
   color,
   size = 16,
   id,
+  className,
 }) => {
   const SvgIcon = icons[icon];
   return (
@@ -167,7 +169,8 @@ export const Icon: FC<Props> = ({
       className={cn(
         s.icon,
         color && s.isFlat,
-        color && s[icon]
+        color && s[icon],
+        className && className
       )}
       style={{
         ['--icon-size' as string]: size,
